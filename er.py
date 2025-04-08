@@ -8,12 +8,12 @@ from sklearn.metrics.pairwise import cosine_similarity
 def predict_er(avg_likes, avg_comments, followers, caption, hashtags):
 
     # ---------------------------- Load Trained Model ----------------------------
-    model_filename = 'C:\\Users\\Ann\\Documents\\project\\UI\\backend\\random_forest_engagement_model.pkl'
+    model_filename = 'random_forest_engagement_model.pkl'
     model = joblib.load(model_filename)
     print("✅ Model loaded from disk.")
 
     # ---------------------------- Load Hashtag Popularity Data ----------------------------
-    with open("C:\\Users\\Ann\\Documents\\project\\UI\\backend\\tags.json", "r") as file:
+    with open("tags.json", "r") as file:
         hashtag_popularity_data = json.load(file)
 
     # Convert to dictionary with hashtag format
